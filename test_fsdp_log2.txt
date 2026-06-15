@@ -1,0 +1,156 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0 -- /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems
+configfile: pyproject.toml
+plugins: jaxtyping-0.3.9, timeout-2.4.0
+collecting ... collected 4 items
+
+tests/test_fsdp.py::test_fsdp_correctness[fp32] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:49:09.071393982 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:49:19.758000 182099 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 182473 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_correctness[fp16] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:49:48.304648082 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:49:51.454000 182099 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 183538 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:50:22.532076985 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:50:23.265000 182099 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 184482 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:50:52.253402011 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:50:54.245000 182099 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 185497 via signal SIGTERM
+FAILED
+
+=================================== FAILURES ===================================
+_________________________ test_fsdp_correctness[fp32] __________________________
+tests/test_fsdp.py:110: in test_fsdp_correctness
+    mp.spawn(
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E       fn(i, *args)
+E       ~~^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 165, in _test_fsdp_correctness
+E       fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E       fsdp_model.finish_gradient_synchronization()
+E       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 182, in finish_gradient_synchronization
+E       param.grad = (output_shard / self.world_size).to(param.data.dtype)
+E       ^^^^^^^^^^
+E   RuntimeError: attempting to assign a gradient of size '[3200]' to a tensor of size '[100, 64]'. Please ensure that the gradient and the tensor are the same size
+_________________________ test_fsdp_correctness[fp16] __________________________
+tests/test_fsdp.py:110: in test_fsdp_correctness
+    mp.spawn(
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 0 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E       fn(i, *args)
+E       ~~^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 165, in _test_fsdp_correctness
+E       fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E       fsdp_model.finish_gradient_synchronization()
+E       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 182, in finish_gradient_synchronization
+E       param.grad = (output_shard / self.world_size).to(param.data.dtype)
+E       ^^^^^^^^^^
+E   RuntimeError: attempting to assign a gradient of size '[3200]' to a tensor of size '[100, 64]'. Please ensure that the gradient and the tensor are the same size
+________________________ test_fsdp_gradient_sync[fp32] _________________________
+tests/test_fsdp.py:195: in test_fsdp_gradient_sync
+    mp.spawn(
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E       fn(i, *args)
+E       ~~^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 224, in _test_fsdp_gradient_sync
+E       fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E       fsdp_model.finish_gradient_synchronization()
+E       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 182, in finish_gradient_synchronization
+E       param.grad = (output_shard / self.world_size).to(param.data.dtype)
+E       ^^^^^^^^^^
+E   RuntimeError: attempting to assign a gradient of size '[3200]' to a tensor of size '[100, 64]'. Please ensure that the gradient and the tensor are the same size
+________________________ test_fsdp_gradient_sync[fp16] _________________________
+tests/test_fsdp.py:195: in test_fsdp_gradient_sync
+    mp.spawn(
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E       fn(i, *args)
+E       ~~^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 224, in _test_fsdp_gradient_sync
+E       fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E       ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E       fsdp_model.finish_gradient_synchronization()
+E       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 182, in finish_gradient_synchronization
+E       param.grad = (output_shard / self.world_size).to(param.data.dtype)
+E       ^^^^^^^^^^
+E   RuntimeError: attempting to assign a gradient of size '[3200]' to a tensor of size '[100, 64]'. Please ensure that the gradient and the tensor are the same size
+=========================== short test summary info ============================
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp32] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp16] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] - torch.multiprocess...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] - torch.multiprocess...
+======================== 4 failed in 129.88s (0:02:09) =========================

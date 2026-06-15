@@ -1,0 +1,1084 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.13, pytest-9.0.3, pluggy-1.6.0 -- /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems
+configfile: pyproject.toml
+plugins: jaxtyping-0.3.9, timeout-2.4.0
+collecting ... collected 4 items
+
+tests/test_fsdp.py::test_fsdp_correctness[fp32] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:45:30.743414786 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:45:43.737000 176754 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 177137 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_correctness[fp16] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:46:12.288813494 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:46:15.427000 176754 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 178371 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:46:46.890994516 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:46:48.089000 176754 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 179346 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/cuda/__init__.py:180: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+[W615 16:47:18.179351879 socket.cpp:764] [c10d] The client socket has failed to connect to [localhost]:12390 (errno: 99 - Cannot assign requested address).
+W0615 16:47:20.585000 176754 .venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:165] Terminating process 180322 via signal SIGTERM
+FAILED
+
+=================================== FAILURES ===================================
+_________________________ test_fsdp_correctness[fp32] __________________________
+
+compute_dtype = None
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_correctness(compute_dtype):
+        """Test that FSDP produces the same results as non-parallel training."""
+        world_size = 2
+>       mp.spawn(
+            _test_fsdp_correctness,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_correctness at 0x7f3de77004a0>, args = (2, None)
+nprocs = 2, join = True, daemon = False, start_method = 'spawn'
+
+    def spawn(fn, args=(), nprocs=1, join=True, daemon=False, start_method="spawn"):
+        r"""Spawns ``nprocs`` processes that run ``fn`` with ``args``.
+    
+        If one of the processes exits with a non-zero exit status, the
+        remaining processes are killed and an exception is raised with the
+        cause of termination. In the case an exception was caught in the
+        child process, it is forwarded and its traceback is included in
+        the exception raised in the parent process.
+    
+        Args:
+            fn (function): Function is called as the entrypoint of the
+                spawned process. This function must be defined at the top
+                level of a module so it can be pickled and spawned. This
+                is a requirement imposed by multiprocessing.
+    
+                The function is called as ``fn(i, *args)``, where ``i`` is
+                the process index and ``args`` is the passed through tuple
+                of arguments.
+    
+            args (tuple): Arguments passed to ``fn``.
+            nprocs (int): Number of processes to spawn.
+            join (bool): Perform a blocking join on all processes.
+            daemon (bool): The spawned processes' daemon flag. If set to True,
+                           daemonic processes will be created.
+            start_method (str): (deprecated) this method will always use ``spawn``
+                                   as the start method. To use a different start method
+                                   use ``start_processes()``.
+    
+        Returns:
+            None if ``join`` is ``True``,
+            :class:`~ProcessContext` if ``join`` is ``False``
+    
+        """
+        if start_method != "spawn":
+            msg = (
+                f"This method only supports start_method=spawn (got: {start_method}).\n"
+                "To use a different start_method use:\n\t\t"
+                " torch.multiprocessing.start_processes(...)"
+            )
+            warnings.warn(msg, FutureWarning, stacklevel=2)
+>       return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_correctness at 0x7f3de77004a0>, args = (2, None)
+nprocs = 2, join = True, daemon = False, start_method = 'spawn'
+
+    def start_processes(
+        fn,
+        args=(),
+        nprocs=1,
+        join=True,
+        daemon=False,
+        start_method="spawn",
+    ):
+        # To speed up performance in certain cases (see https://github.com/pytorch/pytorch/issues/133010),
+        # this func will start processes in parallel if start_method is 'forkserver'.
+        # Please opt in to this perf optimization by setting env var (TORCH_MP_PARALLEL_START) to 1.
+        # todo: investigate why spawn does not work with threadpool and raises SIGINT
+        if (
+            start_method == "forkserver"
+            and os.environ.get(ENV_VAR_PARALLEL_START, "0") == "1"
+        ):
+            log.info("Starting processes in parallel.")
+            start_parallel = True
+        else:
+            # Set env var TORCH_MP_PARALLEL_START to 0 to disable parallel start
+            start_parallel = False
+    
+        mp = multiprocessing.get_context(start_method)
+        error_files = [None] * nprocs
+        processes = [None] * nprocs
+    
+        def start_process(i):
+            # Each process is assigned a file to write tracebacks to.  We
+            # use the file being non-empty to indicate an exception
+            # occurred (vs an expected shutdown).  Note: this previously
+            # used a multiprocessing.Queue but that can be prone to
+            # deadlocks, so we went with a simpler solution for a one-shot
+            # message between processes.
+            tf = tempfile.NamedTemporaryFile(  # noqa: SIM115
+                prefix="pytorch-errorfile-", suffix=".pickle", delete=False
+            )
+            tf.close()
+            os.unlink(tf.name)
+    
+            process = mp.Process(  # pyrefly: ignore  # missing-attribute
+                target=_wrap,
+                args=(fn, i, args, tf.name),
+                daemon=daemon,
+            )
+    
+            process.start()
+            return i, process, tf.name
+    
+        if not start_parallel:
+            for i in range(nprocs):
+                idx, process, tf_name = start_process(i)
+                error_files[idx] = tf_name
+                processes[idx] = process
+        else:
+            with ThreadPoolExecutor(max_workers=nprocs) as executor:
+                futures = [executor.submit(start_process, i) for i in range(nprocs)]
+                for fut in as_completed(futures):
+                    idx, process, tf_name = fut.result()
+                    # idx and process rank needs to be the same.
+                    error_files[idx] = tf_name
+                    processes[idx] = process
+        context = ProcessContext(processes, error_files)
+        if not join:
+            return context
+    
+        # Loop on join until it returns True or raises an exception.
+>       while not context.join():
+                  ^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.multiprocessing.spawn.ProcessContext object at 0x7f3de76c96a0>
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode < 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"<Unknown signal {-exitcode}>"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+>       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 1 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 165, in _test_fsdp_correctness
+E           fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E           fsdp_model.finish_gradient_synchronization()
+E           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 176, in finish_gradient_synchronization
+E           param.grad = output_shard / world_size
+E           ^^^^^^^^^^
+E       RuntimeError: attempting to assign a gradient of size '[3200]' to a tensor of size '[100, 64]'. Please ensure that the gradient and the tensor are the same size
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException
+_________________________ test_fsdp_correctness[fp16] __________________________
+
+compute_dtype = torch.float16
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_correctness(compute_dtype):
+        """Test that FSDP produces the same results as non-parallel training."""
+        world_size = 2
+>       mp.spawn(
+            _test_fsdp_correctness,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_correctness at 0x7f3de77004a0>
+args = (2, torch.float16), nprocs = 2, join = True, daemon = False
+start_method = 'spawn'
+
+    def spawn(fn, args=(), nprocs=1, join=True, daemon=False, start_method="spawn"):
+        r"""Spawns ``nprocs`` processes that run ``fn`` with ``args``.
+    
+        If one of the processes exits with a non-zero exit status, the
+        remaining processes are killed and an exception is raised with the
+        cause of termination. In the case an exception was caught in the
+        child process, it is forwarded and its traceback is included in
+        the exception raised in the parent process.
+    
+        Args:
+            fn (function): Function is called as the entrypoint of the
+                spawned process. This function must be defined at the top
+                level of a module so it can be pickled and spawned. This
+                is a requirement imposed by multiprocessing.
+    
+                The function is called as ``fn(i, *args)``, where ``i`` is
+                the process index and ``args`` is the passed through tuple
+                of arguments.
+    
+            args (tuple): Arguments passed to ``fn``.
+            nprocs (int): Number of processes to spawn.
+            join (bool): Perform a blocking join on all processes.
+            daemon (bool): The spawned processes' daemon flag. If set to True,
+                           daemonic processes will be created.
+            start_method (str): (deprecated) this method will always use ``spawn``
+                                   as the start method. To use a different start method
+                                   use ``start_processes()``.
+    
+        Returns:
+            None if ``join`` is ``True``,
+            :class:`~ProcessContext` if ``join`` is ``False``
+    
+        """
+        if start_method != "spawn":
+            msg = (
+                f"This method only supports start_method=spawn (got: {start_method}).\n"
+                "To use a different start_method use:\n\t\t"
+                " torch.multiprocessing.start_processes(...)"
+            )
+            warnings.warn(msg, FutureWarning, stacklevel=2)
+>       return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_correctness at 0x7f3de77004a0>
+args = (2, torch.float16), nprocs = 2, join = True, daemon = False
+start_method = 'spawn'
+
+    def start_processes(
+        fn,
+        args=(),
+        nprocs=1,
+        join=True,
+        daemon=False,
+        start_method="spawn",
+    ):
+        # To speed up performance in certain cases (see https://github.com/pytorch/pytorch/issues/133010),
+        # this func will start processes in parallel if start_method is 'forkserver'.
+        # Please opt in to this perf optimization by setting env var (TORCH_MP_PARALLEL_START) to 1.
+        # todo: investigate why spawn does not work with threadpool and raises SIGINT
+        if (
+            start_method == "forkserver"
+            and os.environ.get(ENV_VAR_PARALLEL_START, "0") == "1"
+        ):
+            log.info("Starting processes in parallel.")
+            start_parallel = True
+        else:
+            # Set env var TORCH_MP_PARALLEL_START to 0 to disable parallel start
+            start_parallel = False
+    
+        mp = multiprocessing.get_context(start_method)
+        error_files = [None] * nprocs
+        processes = [None] * nprocs
+    
+        def start_process(i):
+            # Each process is assigned a file to write tracebacks to.  We
+            # use the file being non-empty to indicate an exception
+            # occurred (vs an expected shutdown).  Note: this previously
+            # used a multiprocessing.Queue but that can be prone to
+            # deadlocks, so we went with a simpler solution for a one-shot
+            # message between processes.
+            tf = tempfile.NamedTemporaryFile(  # noqa: SIM115
+                prefix="pytorch-errorfile-", suffix=".pickle", delete=False
+            )
+            tf.close()
+            os.unlink(tf.name)
+    
+            process = mp.Process(  # pyrefly: ignore  # missing-attribute
+                target=_wrap,
+                args=(fn, i, args, tf.name),
+                daemon=daemon,
+            )
+    
+            process.start()
+            return i, process, tf.name
+    
+        if not start_parallel:
+            for i in range(nprocs):
+                idx, process, tf_name = start_process(i)
+                error_files[idx] = tf_name
+                processes[idx] = process
+        else:
+            with ThreadPoolExecutor(max_workers=nprocs) as executor:
+                futures = [executor.submit(start_process, i) for i in range(nprocs)]
+                for fut in as_completed(futures):
+                    idx, process, tf_name = fut.result()
+                    # idx and process rank needs to be the same.
+                    error_files[idx] = tf_name
+                    processes[idx] = process
+        context = ProcessContext(processes, error_files)
+        if not join:
+            return context
+    
+        # Loop on join until it returns True or raises an exception.
+>       while not context.join():
+                  ^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.multiprocessing.spawn.ProcessContext object at 0x7f3de76ce710>
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode < 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"<Unknown signal {-exitcode}>"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+>       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 1 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 165, in _test_fsdp_correctness
+E           fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E           fsdp_model.finish_gradient_synchronization()
+E           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 176, in finish_gradient_synchronization
+E           param.grad = output_shard / world_size
+E           ^^^^^^^^^^
+E       RuntimeError: attempting to assign a gradient with dtype 'float' to a tensor with grad_dtype 'Half'. The gradient must match the tensor's grad_dtype (defaults to the tensor's dtype). You can set the tensor's grad_dtype attribute with a specific dtype, or None to allow any dtype. Set grad_dtype with caution. Diverging the dtypes of a tensor and its gradient may break downstream systems that assume they match.
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException
+________________________ test_fsdp_gradient_sync[fp32] _________________________
+
+compute_dtype = None
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_gradient_sync(compute_dtype):
+        """Test that gradients are properly synchronized and correctly shaped."""
+        world_size = 2
+>       mp.spawn(
+            _test_fsdp_gradient_sync,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_gradient_sync at 0x7f3de77005e0>, args = (2, None)
+nprocs = 2, join = True, daemon = False, start_method = 'spawn'
+
+    def spawn(fn, args=(), nprocs=1, join=True, daemon=False, start_method="spawn"):
+        r"""Spawns ``nprocs`` processes that run ``fn`` with ``args``.
+    
+        If one of the processes exits with a non-zero exit status, the
+        remaining processes are killed and an exception is raised with the
+        cause of termination. In the case an exception was caught in the
+        child process, it is forwarded and its traceback is included in
+        the exception raised in the parent process.
+    
+        Args:
+            fn (function): Function is called as the entrypoint of the
+                spawned process. This function must be defined at the top
+                level of a module so it can be pickled and spawned. This
+                is a requirement imposed by multiprocessing.
+    
+                The function is called as ``fn(i, *args)``, where ``i`` is
+                the process index and ``args`` is the passed through tuple
+                of arguments.
+    
+            args (tuple): Arguments passed to ``fn``.
+            nprocs (int): Number of processes to spawn.
+            join (bool): Perform a blocking join on all processes.
+            daemon (bool): The spawned processes' daemon flag. If set to True,
+                           daemonic processes will be created.
+            start_method (str): (deprecated) this method will always use ``spawn``
+                                   as the start method. To use a different start method
+                                   use ``start_processes()``.
+    
+        Returns:
+            None if ``join`` is ``True``,
+            :class:`~ProcessContext` if ``join`` is ``False``
+    
+        """
+        if start_method != "spawn":
+            msg = (
+                f"This method only supports start_method=spawn (got: {start_method}).\n"
+                "To use a different start_method use:\n\t\t"
+                " torch.multiprocessing.start_processes(...)"
+            )
+            warnings.warn(msg, FutureWarning, stacklevel=2)
+>       return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_gradient_sync at 0x7f3de77005e0>, args = (2, None)
+nprocs = 2, join = True, daemon = False, start_method = 'spawn'
+
+    def start_processes(
+        fn,
+        args=(),
+        nprocs=1,
+        join=True,
+        daemon=False,
+        start_method="spawn",
+    ):
+        # To speed up performance in certain cases (see https://github.com/pytorch/pytorch/issues/133010),
+        # this func will start processes in parallel if start_method is 'forkserver'.
+        # Please opt in to this perf optimization by setting env var (TORCH_MP_PARALLEL_START) to 1.
+        # todo: investigate why spawn does not work with threadpool and raises SIGINT
+        if (
+            start_method == "forkserver"
+            and os.environ.get(ENV_VAR_PARALLEL_START, "0") == "1"
+        ):
+            log.info("Starting processes in parallel.")
+            start_parallel = True
+        else:
+            # Set env var TORCH_MP_PARALLEL_START to 0 to disable parallel start
+            start_parallel = False
+    
+        mp = multiprocessing.get_context(start_method)
+        error_files = [None] * nprocs
+        processes = [None] * nprocs
+    
+        def start_process(i):
+            # Each process is assigned a file to write tracebacks to.  We
+            # use the file being non-empty to indicate an exception
+            # occurred (vs an expected shutdown).  Note: this previously
+            # used a multiprocessing.Queue but that can be prone to
+            # deadlocks, so we went with a simpler solution for a one-shot
+            # message between processes.
+            tf = tempfile.NamedTemporaryFile(  # noqa: SIM115
+                prefix="pytorch-errorfile-", suffix=".pickle", delete=False
+            )
+            tf.close()
+            os.unlink(tf.name)
+    
+            process = mp.Process(  # pyrefly: ignore  # missing-attribute
+                target=_wrap,
+                args=(fn, i, args, tf.name),
+                daemon=daemon,
+            )
+    
+            process.start()
+            return i, process, tf.name
+    
+        if not start_parallel:
+            for i in range(nprocs):
+                idx, process, tf_name = start_process(i)
+                error_files[idx] = tf_name
+                processes[idx] = process
+        else:
+            with ThreadPoolExecutor(max_workers=nprocs) as executor:
+                futures = [executor.submit(start_process, i) for i in range(nprocs)]
+                for fut in as_completed(futures):
+                    idx, process, tf_name = fut.result()
+                    # idx and process rank needs to be the same.
+                    error_files[idx] = tf_name
+                    processes[idx] = process
+        context = ProcessContext(processes, error_files)
+        if not join:
+            return context
+    
+        # Loop on join until it returns True or raises an exception.
+>       while not context.join():
+                  ^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.multiprocessing.spawn.ProcessContext object at 0x7f3de76cd810>
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode < 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"<Unknown signal {-exitcode}>"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+>       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 1 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 224, in _test_fsdp_gradient_sync
+E           fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E           fsdp_model.finish_gradient_synchronization()
+E           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 176, in finish_gradient_synchronization
+E           param.grad = output_shard / world_size
+E           ^^^^^^^^^^
+E       RuntimeError: attempting to assign a gradient of size '[3200]' to a tensor of size '[100, 64]'. Please ensure that the gradient and the tensor are the same size
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException
+________________________ test_fsdp_gradient_sync[fp16] _________________________
+
+compute_dtype = torch.float16
+
+    @pytest.mark.filterwarnings("error")
+    @pytest.mark.parametrize("compute_dtype", [None, torch.float16], ids=["fp32", "fp16"])
+    def test_fsdp_gradient_sync(compute_dtype):
+        """Test that gradients are properly synchronized and correctly shaped."""
+        world_size = 2
+>       mp.spawn(
+            _test_fsdp_gradient_sync,
+            args=(world_size, compute_dtype),
+            nprocs=world_size,
+            join=True,
+        )
+
+tests/test_fsdp.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_gradient_sync at 0x7f3de77005e0>
+args = (2, torch.float16), nprocs = 2, join = True, daemon = False
+start_method = 'spawn'
+
+    def spawn(fn, args=(), nprocs=1, join=True, daemon=False, start_method="spawn"):
+        r"""Spawns ``nprocs`` processes that run ``fn`` with ``args``.
+    
+        If one of the processes exits with a non-zero exit status, the
+        remaining processes are killed and an exception is raised with the
+        cause of termination. In the case an exception was caught in the
+        child process, it is forwarded and its traceback is included in
+        the exception raised in the parent process.
+    
+        Args:
+            fn (function): Function is called as the entrypoint of the
+                spawned process. This function must be defined at the top
+                level of a module so it can be pickled and spawned. This
+                is a requirement imposed by multiprocessing.
+    
+                The function is called as ``fn(i, *args)``, where ``i`` is
+                the process index and ``args`` is the passed through tuple
+                of arguments.
+    
+            args (tuple): Arguments passed to ``fn``.
+            nprocs (int): Number of processes to spawn.
+            join (bool): Perform a blocking join on all processes.
+            daemon (bool): The spawned processes' daemon flag. If set to True,
+                           daemonic processes will be created.
+            start_method (str): (deprecated) this method will always use ``spawn``
+                                   as the start method. To use a different start method
+                                   use ``start_processes()``.
+    
+        Returns:
+            None if ``join`` is ``True``,
+            :class:`~ProcessContext` if ``join`` is ``False``
+    
+        """
+        if start_method != "spawn":
+            msg = (
+                f"This method only supports start_method=spawn (got: {start_method}).\n"
+                "To use a different start_method use:\n\t\t"
+                " torch.multiprocessing.start_processes(...)"
+            )
+            warnings.warn(msg, FutureWarning, stacklevel=2)
+>       return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function _test_fsdp_gradient_sync at 0x7f3de77005e0>
+args = (2, torch.float16), nprocs = 2, join = True, daemon = False
+start_method = 'spawn'
+
+    def start_processes(
+        fn,
+        args=(),
+        nprocs=1,
+        join=True,
+        daemon=False,
+        start_method="spawn",
+    ):
+        # To speed up performance in certain cases (see https://github.com/pytorch/pytorch/issues/133010),
+        # this func will start processes in parallel if start_method is 'forkserver'.
+        # Please opt in to this perf optimization by setting env var (TORCH_MP_PARALLEL_START) to 1.
+        # todo: investigate why spawn does not work with threadpool and raises SIGINT
+        if (
+            start_method == "forkserver"
+            and os.environ.get(ENV_VAR_PARALLEL_START, "0") == "1"
+        ):
+            log.info("Starting processes in parallel.")
+            start_parallel = True
+        else:
+            # Set env var TORCH_MP_PARALLEL_START to 0 to disable parallel start
+            start_parallel = False
+    
+        mp = multiprocessing.get_context(start_method)
+        error_files = [None] * nprocs
+        processes = [None] * nprocs
+    
+        def start_process(i):
+            # Each process is assigned a file to write tracebacks to.  We
+            # use the file being non-empty to indicate an exception
+            # occurred (vs an expected shutdown).  Note: this previously
+            # used a multiprocessing.Queue but that can be prone to
+            # deadlocks, so we went with a simpler solution for a one-shot
+            # message between processes.
+            tf = tempfile.NamedTemporaryFile(  # noqa: SIM115
+                prefix="pytorch-errorfile-", suffix=".pickle", delete=False
+            )
+            tf.close()
+            os.unlink(tf.name)
+    
+            process = mp.Process(  # pyrefly: ignore  # missing-attribute
+                target=_wrap,
+                args=(fn, i, args, tf.name),
+                daemon=daemon,
+            )
+    
+            process.start()
+            return i, process, tf.name
+    
+        if not start_parallel:
+            for i in range(nprocs):
+                idx, process, tf_name = start_process(i)
+                error_files[idx] = tf_name
+                processes[idx] = process
+        else:
+            with ThreadPoolExecutor(max_workers=nprocs) as executor:
+                futures = [executor.submit(start_process, i) for i in range(nprocs)]
+                for fut in as_completed(futures):
+                    idx, process, tf_name = fut.result()
+                    # idx and process rank needs to be the same.
+                    error_files[idx] = tf_name
+                    processes[idx] = process
+        context = ProcessContext(processes, error_files)
+        if not join:
+            return context
+    
+        # Loop on join until it returns True or raises an exception.
+>       while not context.join():
+                  ^^^^^^^^^^^^^^
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.multiprocessing.spawn.ProcessContext object at 0x7f3de76ba190>
+timeout = None, grace_period = None
+
+    def join(self, timeout: float | None = None, grace_period: float | None = None):
+        r"""Join one or more processes within spawn context.
+    
+        Attempt to join one or more processes in this spawn context.
+        If one of them exited with a non-zero exit status, this function
+        kills the remaining processes (optionally with a grace period)
+        and raises an exception with the cause of the first process exiting.
+    
+        Returns ``True`` if all processes have been joined successfully,
+        ``False`` if there are more processes that need to be joined.
+    
+        Args:
+            timeout (float): Wait this long (in seconds) before giving up on waiting.
+            grace_period (float): When any processes fail, wait this long (in seconds)
+                for others to shutdown gracefully before terminating them. If they
+                still don't exit, wait another grace period before killing them.
+        """
+        # Ensure this function can be called even when we're done.
+        if len(self.sentinels) == 0:
+            return True
+    
+        # Wait for any process to fail or all of them to succeed.
+        ready = multiprocessing.connection.wait(
+            self.sentinels.keys(),
+            timeout=timeout,
+        )
+    
+        error_index = None
+        for sentinel in ready:
+            index = self.sentinels.pop(sentinel)
+            process = self.processes[index]
+            process.join()
+            if process.exitcode != 0:
+                error_index = index
+                break
+    
+        # Return if there was no error.
+        if error_index is None:
+            # Return whether or not all processes have been joined.
+            return len(self.sentinels) == 0
+        # An error occurred. Clean-up all processes before returning.
+        # First, allow a grace period for processes to shutdown themselves.
+        if grace_period is not None:
+            self._join_procs_with_timeout(grace_period)
+        # Then, terminate processes that are still alive. Try SIGTERM first.
+        for process in self.processes:
+            if process.is_alive():
+                log.warning("Terminating process %s via signal SIGTERM", process.pid)
+                process.terminate()
+    
+        # Try SIGKILL if the process isn't going down after another grace_period.
+        # The reason is related to python signal handling is limited
+        # to main thread and if that is in c/c++ land and stuck it won't
+        # to handle it. We have seen processes getting stuck not handling
+        # SIGTERM for the above reason.
+        self._join_procs_with_timeout(30 if grace_period is None else grace_period)
+        for process in self.processes:
+            if process.is_alive():
+                log.warning(
+                    "Unable to shutdown process %s via SIGTERM , forcefully exiting via SIGKILL",
+                    process.pid,
+                )
+                process.kill()
+            process.join()
+    
+        # The file will only be created if the process crashed.
+        failed_process = self.processes[error_index]
+        if not os.access(self.error_files[error_index], os.R_OK):
+            exitcode = self.processes[error_index].exitcode
+            if exitcode < 0:
+                try:
+                    name = signal.Signals(-exitcode).name
+                except ValueError:
+                    name = f"<Unknown signal {-exitcode}>"
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with signal {name}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                    signal_name=name,
+                )
+            else:
+                raise ProcessExitedException(
+                    f"process {error_index:d} terminated with exit code {exitcode:d}",
+                    error_index=error_index,
+                    error_pid=failed_process.pid,
+                    exit_code=exitcode,
+                )
+    
+        with open(self.error_files[error_index], "rb") as fh:
+            original_trace = pickle.load(fh)
+        msg = f"\n\n-- Process {error_index:d} terminated with the following error:\n"
+        msg += original_trace
+>       raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E       torch.multiprocessing.spawn.ProcessRaisedException: 
+E       
+E       -- Process 0 terminated with the following error:
+E       Traceback (most recent call last):
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py", line 87, in _wrap
+E           fn(i, *args)
+E           ~~^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 224, in _test_fsdp_gradient_sync
+E           fsdp_on_after_backward(fsdp_model, fsdp_optimizer)
+E           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/adapters.py", line 52, in fsdp_on_after_backward
+E           fsdp_model.finish_gradient_synchronization()
+E           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+E         File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 176, in finish_gradient_synchronization
+E           param.grad = output_shard / world_size
+E           ^^^^^^^^^^
+E       RuntimeError: attempting to assign a gradient with dtype 'float' to a tensor with grad_dtype 'Half'. The gradient must match the tensor's grad_dtype (defaults to the tensor's dtype). You can set the tensor's grad_dtype attribute with a specific dtype, or None to allow any dtype. Set grad_dtype with caution. Diverging the dtypes of a tensor and its gradient may break downstream systems that assume they match.
+
+.venv/lib/python3.13/site-packages/torch/multiprocessing/spawn.py:211: ProcessRaisedException
+=========================== short test summary info ============================
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp32] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp16] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] - torch.multiprocess...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] - torch.multiprocess...
+======================== 4 failed in 136.57s (0:02:16) =========================

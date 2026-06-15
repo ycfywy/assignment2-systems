@@ -1,0 +1,283 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-9.1.0, pluggy-1.6.0 -- /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems
+configfile: pyproject.toml
+plugins: jaxtyping-0.3.11, timeout-2.4.0
+collecting ... collected 14 items
+
+tests/test_attention.py::test_flash_forward_pass_pytorch PASSED
+tests/test_attention.py::test_flash_forward_pass_triton[False] PASSED
+tests/test_attention.py::test_flash_forward_pass_triton[True] PASSED
+tests/test_attention.py::test_flash_backward_pytorch PASSED
+tests/test_attention.py::test_flash_backward_triton[False] PASSED
+tests/test_attention.py::test_flash_backward_triton[True] PASSED
+tests/test_ddp.py::test_DistributedDataParallel[ToyModel] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:80: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_x = torch.load(FIXTURES_PATH / "ddp_test_data.pt")
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:80: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_x = torch.load(FIXTURES_PATH / "ddp_test_data.pt")
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:82: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_y = torch.load(FIXTURES_PATH / "ddp_test_labels.pt")
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:82: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_y = torch.load(FIXTURES_PATH / "ddp_test_labels.pt")
+PASSED
+tests/test_ddp.py::test_DistributedDataParallel[ToyModelWithTiedWeights] /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:80: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_x = torch.load(FIXTURES_PATH / "ddp_test_data.pt")
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:82: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_y = torch.load(FIXTURES_PATH / "ddp_test_labels.pt")
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:80: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_x = torch.load(FIXTURES_PATH / "ddp_test_data.pt")
+/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_ddp.py:82: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  all_y = torch.load(FIXTURES_PATH / "ddp_test_labels.pt")
+PASSED
+tests/test_fsdp.py::test_fsdp_correctness[fp32] W0615 19:29:19.825000 332437 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 334947 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 334947 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_correctness[fp16] W0615 19:29:49.050000 332437 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 336012 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 336012 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] W0615 19:30:20.421000 332437 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 336935 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 336935 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] W0615 19:30:50.932000 332437 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 337918 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 337918 via signal SIGTERM
+FAILED
+tests/test_sharded_optimizer.py::test_sharded_optimizer[ToyModel] PASSED
+tests/test_sharded_optimizer.py::test_sharded_optimizer[ToyModelWithTiedWeights] PASSED
+
+=================================== FAILURES ===================================
+_________________________ test_fsdp_correctness[fp32] __________________________
+tests/test_fsdp.py:110: in test_fsdp_correctness
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 152, in _test_fsdp_correctness
+E       non_parallel_out = non_parallel_model(all_input_ids)
+E                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 39, in forward
+E       x = self.linear1(x)
+E           ^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336-basics/cs336_basics/model.py", line 39, in forward
+E       return einsum(x, self.weight, "... d_in, d_out d_in -> ... d_out")
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/einops.py", line 939, in einsum
+E       return get_backend(tensors[0]).einsum(pattern, *tensors)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/_backends.py", line 291, in einsum
+E       return self.torch.einsum(pattern, *x)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/functional.py", line 402, in einsum
+E       return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 334947 via signal SIGTERM
+_________________________ test_fsdp_correctness[fp16] __________________________
+tests/test_fsdp.py:110: in test_fsdp_correctness
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 0 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 152, in _test_fsdp_correctness
+E       non_parallel_out = non_parallel_model(all_input_ids)
+E                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 39, in forward
+E       x = self.linear1(x)
+E           ^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1844, in _call_impl
+E       return inner()
+E              ^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in inner
+E       result = forward_call(*args, **kwargs)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336-basics/cs336_basics/model.py", line 39, in forward
+E       return einsum(x, self.weight, "... d_in, d_out d_in -> ... d_out")
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/einops.py", line 939, in einsum
+E       return get_backend(tensors[0]).einsum(pattern, *tensors)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/_backends.py", line 291, in einsum
+E       return self.torch.einsum(pattern, *x)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/functional.py", line 402, in einsum
+E       return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 336012 via signal SIGTERM
+________________________ test_fsdp_gradient_sync[fp32] _________________________
+tests/test_fsdp.py:195: in test_fsdp_gradient_sync
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 220, in _test_fsdp_gradient_sync
+E       out = fsdp_model(input_ids)
+E             ^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 164, in forward
+E       output = self.module(*inputs, **kwargs)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 39, in forward
+E       x = self.linear1(x)
+E           ^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336-basics/cs336_basics/model.py", line 39, in forward
+E       return einsum(x, self.weight, "... d_in, d_out d_in -> ... d_out")
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/einops.py", line 939, in einsum
+E       return get_backend(tensors[0]).einsum(pattern, *tensors)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/_backends.py", line 291, in einsum
+E       return self.torch.einsum(pattern, *x)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/functional.py", line 402, in einsum
+E       return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 336935 via signal SIGTERM
+________________________ test_fsdp_gradient_sync[fp16] _________________________
+tests/test_fsdp.py:195: in test_fsdp_gradient_sync
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 0 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 220, in _test_fsdp_gradient_sync
+E       out = fsdp_model(input_ids)
+E             ^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 164, in forward
+E       output = self.module(*inputs, **kwargs)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 39, in forward
+E       x = self.linear1(x)
+E           ^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+E       return self._call_impl(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+E       return forward_call(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336-basics/cs336_basics/model.py", line 39, in forward
+E       return einsum(x, self.weight, "... d_in, d_out d_in -> ... d_out")
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/einops.py", line 939, in einsum
+E       return get_backend(tensors[0]).einsum(pattern, *tensors)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/einops/_backends.py", line 291, in einsum
+E       return self.torch.einsum(pattern, *x)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/functional.py", line 402, in einsum
+E       return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 337918 via signal SIGTERM
+=========================== short test summary info ============================
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp32] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp16] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] - torch.multiprocess...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] - torch.multiprocess...
+=================== 4 failed, 10 passed in 285.92s (0:04:45) ===================

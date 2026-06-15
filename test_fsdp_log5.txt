@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-9.1.0, pluggy-1.6.0 -- /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems
+configfile: pyproject.toml
+plugins: jaxtyping-0.3.11, timeout-2.4.0
+collecting ... collected 4 items
+
+tests/test_fsdp.py::test_fsdp_correctness[fp32] PASSED
+tests/test_fsdp.py::test_fsdp_correctness[fp16] PASSED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] PASSED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] PASSED
+
+======================== 4 passed in 136.40s (0:02:16) =========================

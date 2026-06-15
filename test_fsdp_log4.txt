@@ -1,0 +1,182 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-9.1.0, pluggy-1.6.0 -- /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems
+configfile: pyproject.toml
+plugins: jaxtyping-0.3.11, timeout-2.4.0
+collecting ... collected 4 items
+
+tests/test_fsdp.py::test_fsdp_correctness[fp32] W0615 19:33:01.840000 340283 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 340633 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 340633 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_correctness[fp16] W0615 19:33:35.837000 340283 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 341826 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 341826 via signal SIGTERM
+FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] FAILED
+tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] W0615 19:34:44.247000 340283 .venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:160] Terminating process 343882 via signal SIGTERM
+
+-------------------------------- live log call ---------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 343882 via signal SIGTERM
+FAILED
+
+=================================== FAILURES ===================================
+_________________________ test_fsdp_correctness[fp32] __________________________
+tests/test_fsdp.py:110: in test_fsdp_correctness
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 0 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 163, in _test_fsdp_correctness
+E       fsdp_loss.backward()
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+E       torch.autograd.backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+E       _engine_run_backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+E       return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 113, in hook
+E       handle = dist.reduce_scatter(output_shard, input_list, op=dist.ReduceOp.SUM, async_op=True)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E       return func(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 3757, in reduce_scatter
+E       work = group.reduce_scatter([output], [input_list], opts)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: ProcessGroupGloo does not support reduce_scatter
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 340633 via signal SIGTERM
+_________________________ test_fsdp_correctness[fp16] __________________________
+tests/test_fsdp.py:110: in test_fsdp_correctness
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 0 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 163, in _test_fsdp_correctness
+E       fsdp_loss.backward()
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+E       torch.autograd.backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+E       _engine_run_backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+E       return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 113, in hook
+E       handle = dist.reduce_scatter(output_shard, input_list, op=dist.ReduceOp.SUM, async_op=True)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E       return func(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 3757, in reduce_scatter
+E       work = group.reduce_scatter([output], [input_list], opts)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: ProcessGroupGloo does not support reduce_scatter
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 341826 via signal SIGTERM
+________________________ test_fsdp_gradient_sync[fp32] _________________________
+tests/test_fsdp.py:195: in test_fsdp_gradient_sync
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 222, in _test_fsdp_gradient_sync
+E       loss.backward()
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+E       torch.autograd.backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+E       _engine_run_backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+E       return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 113, in hook
+E       handle = dist.reduce_scatter(output_shard, input_list, op=dist.ReduceOp.SUM, async_op=True)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E       return func(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 3757, in reduce_scatter
+E       work = group.reduce_scatter([output], [input_list], opts)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: ProcessGroupGloo does not support reduce_scatter
+________________________ test_fsdp_gradient_sync[fp16] _________________________
+tests/test_fsdp.py:195: in test_fsdp_gradient_sync
+    mp.spawn(
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:328: in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:284: in start_processes
+    while not context.join():
+              ^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py:203: in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+E   torch.multiprocessing.spawn.ProcessRaisedException: 
+E   
+E   -- Process 1 terminated with the following error:
+E   Traceback (most recent call last):
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+E       fn(i, *args)
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/tests/test_fsdp.py", line 222, in _test_fsdp_gradient_sync
+E       loss.backward()
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+E       torch.autograd.backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+E       _engine_run_backward(
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+E       return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/cs336_systems/fsdp.py", line 113, in hook
+E       handle = dist.reduce_scatter(output_shard, input_list, op=dist.ReduceOp.SUM, async_op=True)
+E                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+E       return func(*args, **kwargs)
+E              ^^^^^^^^^^^^^^^^^^^^^
+E     File "/apdcephfs_fslw/share_304728725/dannyyan/cs336/assignment2-systems/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 3757, in reduce_scatter
+E       work = group.reduce_scatter([output], [input_list], opts)
+E              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: ProcessGroupGloo does not support reduce_scatter
+------------------------------ Captured log call -------------------------------
+WARNING  torch.multiprocessing.spawn:spawn.py:160 Terminating process 343882 via signal SIGTERM
+=========================== short test summary info ============================
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp32] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_correctness[fp16] - torch.multiprocessin...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp32] - torch.multiprocess...
+FAILED tests/test_fsdp.py::test_fsdp_gradient_sync[fp16] - torch.multiprocess...
+======================== 4 failed in 138.18s (0:02:18) =========================
